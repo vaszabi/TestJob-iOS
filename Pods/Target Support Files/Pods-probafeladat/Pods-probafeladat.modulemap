@@ -1,0 +1,6 @@
+framework module Pods_probafeladat {
+  umbrella header "Pods-probafeladat-umbrella.h"
+
+  export *
+  module * { export * }
+}

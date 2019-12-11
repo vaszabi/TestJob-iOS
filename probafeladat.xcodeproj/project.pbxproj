@@ -1,0 +1,930 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10E03D9E2F61FD60274F71ED /* Pods_probafeladat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A2573C9E468AD98B9B3F0 /* Pods_probafeladat.framework */; };
+		780F039F2372C6EF00E0E166 /* NoConnectionErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F039E2372C6EF00E0E166 /* NoConnectionErrorHandler.swift */; };
+		780F03A32372E19600E0E166 /* DataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F03A22372E19600E0E166 /* DataApi.swift */; };
+		783BE28D2355E45F00650B0C /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BE28C2355E45F00650B0C /* DetailsTableViewController.swift */; };
+		785106EB23717F210012EFE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EA23717F210012EFE0 /* NetworkManager.swift */; };
+		785106ED2371B0560012EFE0 /* UnauthorizedErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EC2371B0560012EFE0 /* UnauthorizedErrorHandler.swift */; };
+		785106EF2371B0750012EFE0 /* ForbiddenErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EE2371B0750012EFE0 /* ForbiddenErrorHandler.swift */; };
+		785106F12371B0940012EFE0 /* InternalServerErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106F02371B0940012EFE0 /* InternalServerErrorHandler.swift */; };
+		785106F32371B0A30012EFE0 /* NotFoundErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106F22371B0A30012EFE0 /* NotFoundErrorHandler.swift */; };
+		785106F52371B0BE0012EFE0 /* EmptyResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106F42371B0BE0012EFE0 /* EmptyResponseHandler.swift */; };
+		7851CF43238295CB0005EF1A /* HttpClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7851CF42238295CB0005EF1A /* HttpClientProtocol.swift */; };
+		7851CF462382A3970005EF1A /* HttpClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7851CF442382989B0005EF1A /* HttpClientMock.swift */; };
+		7851CF472382A3A80005EF1A /* HttpClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7851CF42238295CB0005EF1A /* HttpClientProtocol.swift */; };
+		78593E90234CB5BA00F4D4C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78593E8F234CB5BA00F4D4C2 /* AppDelegate.swift */; };
+		78593E92234CB5BA00F4D4C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78593E91234CB5BA00F4D4C2 /* SceneDelegate.swift */; };
+		78593E94234CB5BA00F4D4C2 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78593E93234CB5BA00F4D4C2 /* CardsViewController.swift */; };
+		78593E97234CB5BA00F4D4C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78593E95234CB5BA00F4D4C2 /* Main.storyboard */; };
+		78593E99234CB5BB00F4D4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78593E98234CB5BB00F4D4C2 /* Assets.xcassets */; };
+		78593E9C234CB5BB00F4D4C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78593E9A234CB5BB00F4D4C2 /* LaunchScreen.storyboard */; };
+		78593EA6234CDC0300F4D4C2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78593EA5234CDC0300F4D4C2 /* Card.swift */; };
+		785B17BD237D7211005354EC /* BasicErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B17BC237D7211005354EC /* BasicErrorHandler.swift */; };
+		785B17BF237D8ABE005354EC /* JsonErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B17BE237D8ABE005354EC /* JsonErrorHandler.swift */; };
+		785B17CC237D99C0005354EC /* probafeladatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B17CB237D99C0005354EC /* probafeladatTests.swift */; };
+		7864FE2B2397B3AB006BB36D /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB3A22396998400D860E1 /* Storyboarded.swift */; };
+		7864FE2C2397B3B1006BB36D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB3A02396990F00D860E1 /* MainCoordinator.swift */; };
+		7864FE2D2397B3B4006BB36D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB39E239698C300D860E1 /* Coordinator.swift */; };
+		7869C057239911E500F3822B /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869C056239911E500F3822B /* ServiceMock.swift */; };
+		786F718523840074002BA836 /* CardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F718423840074002BA836 /* CardsPresenter.swift */; };
+		7876FD5C237EAE7A00FDBD07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78593E98234CB5BB00F4D4C2 /* Assets.xcassets */; };
+		7884507A2359AAAC00A3717C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788450792359AAAC00A3717C /* ChartView.swift */; };
+		7884507C235DA54000A3717C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884507B235DA54000A3717C /* Service.swift */; };
+		7884507E235DD8BE00A3717C /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884507D235DD8BE00A3717C /* OverviewCell.swift */; };
+		7890ECEC237C084A00579018 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECEB237C084A00579018 /* AlertService.swift */; };
+		7890ECEE237C27DE00579018 /* GeneralErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECED237C27DD00579018 /* GeneralErrorHandler.swift */; };
+		7890ECF0237C4C9800579018 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECEF237C4C9800579018 /* HttpClient.swift */; };
+		78BBA793238BFBC30090DFA1 /* probafeladatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBA78B238BF8750090DFA1 /* probafeladatUITests.swift */; };
+		78C815C323855DB9006A642C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78593EA5234CDC0300F4D4C2 /* Card.swift */; };
+		78C815CF23856888006A642C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EA23717F210012EFE0 /* NetworkManager.swift */; };
+		78C815D02385688E006A642C /* UnauthorizedErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EC2371B0560012EFE0 /* UnauthorizedErrorHandler.swift */; };
+		78C815D12385688E006A642C /* ForbiddenErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EE2371B0750012EFE0 /* ForbiddenErrorHandler.swift */; };
+		78C815D22385688E006A642C /* InternalServerErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106F02371B0940012EFE0 /* InternalServerErrorHandler.swift */; };
+		78C815D32385688E006A642C /* NotFoundErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106F22371B0A30012EFE0 /* NotFoundErrorHandler.swift */; };
+		78C815D42385688E006A642C /* EmptyResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106F42371B0BE0012EFE0 /* EmptyResponseHandler.swift */; };
+		78C815D52385688E006A642C /* NoConnectionErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F039E2372C6EF00E0E166 /* NoConnectionErrorHandler.swift */; };
+		78C815D62385688E006A642C /* GeneralErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECED237C27DD00579018 /* GeneralErrorHandler.swift */; };
+		78C815D72385688E006A642C /* BasicErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B17BC237D7211005354EC /* BasicErrorHandler.swift */; };
+		78C815D82385688E006A642C /* JsonErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B17BE237D8ABE005354EC /* JsonErrorHandler.swift */; };
+		78C815D923856891006A642C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884507B235DA54000A3717C /* Service.swift */; };
+		78C815DB238568B8006A642C /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECEB237C084A00579018 /* AlertService.swift */; };
+		78C815DC23856968006A642C /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78593E93234CB5BA00F4D4C2 /* CardsViewController.swift */; };
+		78C815DF2385698A006A642C /* CardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F718423840074002BA836 /* CardsPresenter.swift */; };
+		78C815E02385699D006A642C /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884507D235DD8BE00A3717C /* OverviewCell.swift */; };
+		78C815E1238569BD006A642C /* DataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F03A22372E19600E0E166 /* DataApi.swift */; };
+		78C815E2238569C1006A642C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788450792359AAAC00A3717C /* ChartView.swift */; };
+		78C815E3238569C4006A642C /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BE28C2355E45F00650B0C /* DetailsTableViewController.swift */; };
+		78C815E4238569D4006A642C /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECEF237C4C9800579018 /* HttpClient.swift */; };
+		78DEB39F239698C300D860E1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB39E239698C300D860E1 /* Coordinator.swift */; };
+		78DEB3A12396990F00D860E1 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB3A02396990F00D860E1 /* MainCoordinator.swift */; };
+		78DEB3A32396998400D860E1 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB3A22396998400D860E1 /* Storyboarded.swift */; };
+		F0FF8A2CFF8356A9A9369EA9 /* Pods_probafeladat_probafeladatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ACD7F6FAFE0190211B5B895 /* Pods_probafeladat_probafeladatTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		785B17CE237D99C0005354EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78593E84234CB5BA00F4D4C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78593E8B234CB5BA00F4D4C2;
+			remoteInfo = probafeladat;
+		};
+		78BBA78E238BF8750090DFA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78593E84234CB5BA00F4D4C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78593E8B234CB5BA00F4D4C2;
+			remoteInfo = probafeladat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2ACD7F6FAFE0190211B5B895 /* Pods_probafeladat_probafeladatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_probafeladat_probafeladatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		555A2573C9E468AD98B9B3F0 /* Pods_probafeladat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_probafeladat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		561B716592B39ABB208E6952 /* Pods-probafeladat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-probafeladat.release.xcconfig"; path = "Target Support Files/Pods-probafeladat/Pods-probafeladat.release.xcconfig"; sourceTree = "<group>"; };
+		780F039E2372C6EF00E0E166 /* NoConnectionErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionErrorHandler.swift; sourceTree = "<group>"; };
+		780F03A22372E19600E0E166 /* DataApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataApi.swift; sourceTree = "<group>"; };
+		783BE28C2355E45F00650B0C /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
+		785106EA23717F210012EFE0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		785106EC2371B0560012EFE0 /* UnauthorizedErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedErrorHandler.swift; sourceTree = "<group>"; };
+		785106EE2371B0750012EFE0 /* ForbiddenErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForbiddenErrorHandler.swift; sourceTree = "<group>"; };
+		785106F02371B0940012EFE0 /* InternalServerErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalServerErrorHandler.swift; sourceTree = "<group>"; };
+		785106F22371B0A30012EFE0 /* NotFoundErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundErrorHandler.swift; sourceTree = "<group>"; };
+		785106F42371B0BE0012EFE0 /* EmptyResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponseHandler.swift; sourceTree = "<group>"; };
+		7851CF42238295CB0005EF1A /* HttpClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientProtocol.swift; sourceTree = "<group>"; };
+		7851CF442382989B0005EF1A /* HttpClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
+		78593E8C234CB5BA00F4D4C2 /* probafeladat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = probafeladat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78593E8F234CB5BA00F4D4C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78593E91234CB5BA00F4D4C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		78593E93234CB5BA00F4D4C2 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		78593E96234CB5BA00F4D4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78593E98234CB5BB00F4D4C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78593E9B234CB5BB00F4D4C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78593E9D234CB5BB00F4D4C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78593EA5234CDC0300F4D4C2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		785B17BC237D7211005354EC /* BasicErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicErrorHandler.swift; sourceTree = "<group>"; };
+		785B17BE237D8ABE005354EC /* JsonErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonErrorHandler.swift; sourceTree = "<group>"; };
+		785B17C9237D99C0005354EC /* probafeladatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = probafeladatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		785B17CB237D99C0005354EC /* probafeladatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probafeladatTests.swift; sourceTree = "<group>"; };
+		785B17CD237D99C0005354EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7869C056239911E500F3822B /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
+		786F718423840074002BA836 /* CardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsPresenter.swift; sourceTree = "<group>"; };
+		788450792359AAAC00A3717C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		7884507B235DA54000A3717C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7884507D235DD8BE00A3717C /* OverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
+		7890ECEB237C084A00579018 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		7890ECED237C27DD00579018 /* GeneralErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralErrorHandler.swift; sourceTree = "<group>"; };
+		7890ECEF237C4C9800579018 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		78BBA789238BF8750090DFA1 /* probafeladatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = probafeladatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BBA78B238BF8750090DFA1 /* probafeladatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probafeladatUITests.swift; sourceTree = "<group>"; };
+		78BBA78D238BF8750090DFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78DEB39E239698C300D860E1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		78DEB3A02396990F00D860E1 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		78DEB3A22396998400D860E1 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		9635E846BC10FB09418CE79D /* Pods-probafeladat-probafeladatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-probafeladat-probafeladatTests.release.xcconfig"; path = "Target Support Files/Pods-probafeladat-probafeladatTests/Pods-probafeladat-probafeladatTests.release.xcconfig"; sourceTree = "<group>"; };
+		AC7A1FF7359D4C5966D1C7EB /* Pods-probafeladat-probafeladatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-probafeladat-probafeladatTests.debug.xcconfig"; path = "Target Support Files/Pods-probafeladat-probafeladatTests/Pods-probafeladat-probafeladatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0C79D15F42BFDCAD8353B4E /* Pods-probafeladat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-probafeladat.debug.xcconfig"; path = "Target Support Files/Pods-probafeladat/Pods-probafeladat.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78593E89234CB5BA00F4D4C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E03D9E2F61FD60274F71ED /* Pods_probafeladat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		785B17C6237D99C0005354EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FF8A2CFF8356A9A9369EA9 /* Pods_probafeladat_probafeladatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78BBA786238BF8750090DFA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31424C7C01E7172293319061 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				555A2573C9E468AD98B9B3F0 /* Pods_probafeladat.framework */,
+				2ACD7F6FAFE0190211B5B895 /* Pods_probafeladat_probafeladatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7721ABC7D826E3ABEB4D1D2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0C79D15F42BFDCAD8353B4E /* Pods-probafeladat.debug.xcconfig */,
+				561B716592B39ABB208E6952 /* Pods-probafeladat.release.xcconfig */,
+				AC7A1FF7359D4C5966D1C7EB /* Pods-probafeladat-probafeladatTests.debug.xcconfig */,
+				9635E846BC10FB09418CE79D /* Pods-probafeladat-probafeladatTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		780F03A52372FE5C00E0E166 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				780F03A22372E19600E0E166 /* DataApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		783522AB2369976A00BCF86F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				783BE28C2355E45F00650B0C /* DetailsTableViewController.swift */,
+				78593E93234CB5BA00F4D4C2 /* CardsViewController.swift */,
+				78DEB3A22396998400D860E1 /* Storyboarded.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		783522AC2369977400BCF86F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78593EA5234CDC0300F4D4C2 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		783522AD2369979200BCF86F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7884507D235DD8BE00A3717C /* OverviewCell.swift */,
+				78593E95234CB5BA00F4D4C2 /* Main.storyboard */,
+				78593E9A234CB5BB00F4D4C2 /* LaunchScreen.storyboard */,
+				788450792359AAAC00A3717C /* ChartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		783522AE236997B700BCF86F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7884507B235DA54000A3717C /* Service.swift */,
+				7890ECEB237C084A00579018 /* AlertService.swift */,
+				7869C056239911E500F3822B /* ServiceMock.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		785106E923717EEE0012EFE0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				785106EA23717F210012EFE0 /* NetworkManager.swift */,
+				7890ECEF237C4C9800579018 /* HttpClient.swift */,
+				7851CF42238295CB0005EF1A /* HttpClientProtocol.swift */,
+				7851CF442382989B0005EF1A /* HttpClientMock.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		785106F62371B0CB0012EFE0 /* BasicErrorHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				785106EC2371B0560012EFE0 /* UnauthorizedErrorHandler.swift */,
+				785106EE2371B0750012EFE0 /* ForbiddenErrorHandler.swift */,
+				785106F02371B0940012EFE0 /* InternalServerErrorHandler.swift */,
+				785106F22371B0A30012EFE0 /* NotFoundErrorHandler.swift */,
+				785106F42371B0BE0012EFE0 /* EmptyResponseHandler.swift */,
+				780F039E2372C6EF00E0E166 /* NoConnectionErrorHandler.swift */,
+				7890ECED237C27DD00579018 /* GeneralErrorHandler.swift */,
+				785B17BC237D7211005354EC /* BasicErrorHandler.swift */,
+				785B17BE237D8ABE005354EC /* JsonErrorHandler.swift */,
+			);
+			path = BasicErrorHandlers;
+			sourceTree = "<group>";
+		};
+		78593E83234CB5BA00F4D4C2 = {
+			isa = PBXGroup;
+			children = (
+				78593E8E234CB5BA00F4D4C2 /* probafeladat */,
+				785B17CA237D99C0005354EC /* probafeladatTests */,
+				78BBA78A238BF8750090DFA1 /* probafeladatUITests */,
+				78593E8D234CB5BA00F4D4C2 /* Products */,
+				7721ABC7D826E3ABEB4D1D2B /* Pods */,
+				31424C7C01E7172293319061 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78593E8D234CB5BA00F4D4C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78593E8C234CB5BA00F4D4C2 /* probafeladat.app */,
+				785B17C9237D99C0005354EC /* probafeladatTests.xctest */,
+				78BBA789238BF8750090DFA1 /* probafeladatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78593E8E234CB5BA00F4D4C2 /* probafeladat */ = {
+			isa = PBXGroup;
+			children = (
+				78DEB39D239698AE00D860E1 /* Coordinator */,
+				786F71832384004F002BA836 /* Presenter */,
+				780F03A52372FE5C00E0E166 /* Api */,
+				783522AE236997B700BCF86F /* Service */,
+				783522AB2369976A00BCF86F /* Controller */,
+				785106E923717EEE0012EFE0 /* Network */,
+				783522AC2369977400BCF86F /* Model */,
+				785106F62371B0CB0012EFE0 /* BasicErrorHandlers */,
+				783522AD2369979200BCF86F /* View */,
+				78593E91234CB5BA00F4D4C2 /* SceneDelegate.swift */,
+				78593E8F234CB5BA00F4D4C2 /* AppDelegate.swift */,
+				78593E98234CB5BB00F4D4C2 /* Assets.xcassets */,
+				78593E9D234CB5BB00F4D4C2 /* Info.plist */,
+			);
+			path = probafeladat;
+			sourceTree = "<group>";
+		};
+		785B17CA237D99C0005354EC /* probafeladatTests */ = {
+			isa = PBXGroup;
+			children = (
+				785B17CB237D99C0005354EC /* probafeladatTests.swift */,
+				785B17CD237D99C0005354EC /* Info.plist */,
+			);
+			path = probafeladatTests;
+			sourceTree = "<group>";
+		};
+		786F71832384004F002BA836 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				786F718423840074002BA836 /* CardsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		78BBA78A238BF8750090DFA1 /* probafeladatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78BBA78B238BF8750090DFA1 /* probafeladatUITests.swift */,
+				78BBA78D238BF8750090DFA1 /* Info.plist */,
+			);
+			path = probafeladatUITests;
+			sourceTree = "<group>";
+		};
+		78DEB39D239698AE00D860E1 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				78DEB39E239698C300D860E1 /* Coordinator.swift */,
+				78DEB3A02396990F00D860E1 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78593E8B234CB5BA00F4D4C2 /* probafeladat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78593EA0234CB5BB00F4D4C2 /* Build configuration list for PBXNativeTarget "probafeladat" */;
+			buildPhases = (
+				EFF6C8C85B15112E45145920 /* [CP] Check Pods Manifest.lock */,
+				78593E88234CB5BA00F4D4C2 /* Sources */,
+				78593E89234CB5BA00F4D4C2 /* Frameworks */,
+				78593E8A234CB5BA00F4D4C2 /* Resources */,
+				EF7A4F175C9855121E7103CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = probafeladat;
+			productName = probafeladat;
+			productReference = 78593E8C234CB5BA00F4D4C2 /* probafeladat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		785B17C8237D99C0005354EC /* probafeladatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 785B17D0237D99C0005354EC /* Build configuration list for PBXNativeTarget "probafeladatTests" */;
+			buildPhases = (
+				31B4C7BD25357F427E724911 /* [CP] Check Pods Manifest.lock */,
+				785B17C5237D99C0005354EC /* Sources */,
+				785B17C6237D99C0005354EC /* Frameworks */,
+				785B17C7237D99C0005354EC /* Resources */,
+				C56B8050F4612C2969564182 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				785B17CF237D99C0005354EC /* PBXTargetDependency */,
+			);
+			name = probafeladatTests;
+			productName = probafeladatTests;
+			productReference = 785B17C9237D99C0005354EC /* probafeladatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78BBA788238BF8750090DFA1 /* probafeladatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78BBA792238BF8750090DFA1 /* Build configuration list for PBXNativeTarget "probafeladatUITests" */;
+			buildPhases = (
+				78BBA785238BF8750090DFA1 /* Sources */,
+				78BBA786238BF8750090DFA1 /* Frameworks */,
+				78BBA787238BF8750090DFA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78BBA78F238BF8750090DFA1 /* PBXTargetDependency */,
+			);
+			name = probafeladatUITests;
+			productName = probafeladatUITests;
+			productReference = 78BBA789238BF8750090DFA1 /* probafeladatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78593E84234CB5BA00F4D4C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = WUP;
+				TargetAttributes = {
+					78593E8B234CB5BA00F4D4C2 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					785B17C8237D99C0005354EC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 78593E8B234CB5BA00F4D4C2;
+					};
+					78BBA788238BF8750090DFA1 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 78593E8B234CB5BA00F4D4C2;
+					};
+				};
+			};
+			buildConfigurationList = 78593E87234CB5BA00F4D4C2 /* Build configuration list for PBXProject "probafeladat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78593E83234CB5BA00F4D4C2;
+			productRefGroup = 78593E8D234CB5BA00F4D4C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78593E8B234CB5BA00F4D4C2 /* probafeladat */,
+				785B17C8237D99C0005354EC /* probafeladatTests */,
+				78BBA788238BF8750090DFA1 /* probafeladatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78593E8A234CB5BA00F4D4C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78593E9C234CB5BB00F4D4C2 /* LaunchScreen.storyboard in Resources */,
+				78593E99234CB5BB00F4D4C2 /* Assets.xcassets in Resources */,
+				78593E97234CB5BA00F4D4C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		785B17C7237D99C0005354EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7876FD5C237EAE7A00FDBD07 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78BBA787238BF8750090DFA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31B4C7BD25357F427E724911 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-probafeladat-probafeladatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C56B8050F4612C2969564182 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-probafeladat-probafeladatTests/Pods-probafeladat-probafeladatTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-probafeladat-probafeladatTests/Pods-probafeladat-probafeladatTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-probafeladat-probafeladatTests/Pods-probafeladat-probafeladatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7A4F175C9855121E7103CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-probafeladat/Pods-probafeladat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-probafeladat/Pods-probafeladat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-probafeladat/Pods-probafeladat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFF6C8C85B15112E45145920 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-probafeladat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78593E88234CB5BA00F4D4C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785106EB23717F210012EFE0 /* NetworkManager.swift in Sources */,
+				785106F52371B0BE0012EFE0 /* EmptyResponseHandler.swift in Sources */,
+				78DEB39F239698C300D860E1 /* Coordinator.swift in Sources */,
+				786F718523840074002BA836 /* CardsPresenter.swift in Sources */,
+				7890ECEE237C27DE00579018 /* GeneralErrorHandler.swift in Sources */,
+				785B17BF237D8ABE005354EC /* JsonErrorHandler.swift in Sources */,
+				785106ED2371B0560012EFE0 /* UnauthorizedErrorHandler.swift in Sources */,
+				785106EF2371B0750012EFE0 /* ForbiddenErrorHandler.swift in Sources */,
+				7884507C235DA54000A3717C /* Service.swift in Sources */,
+				7869C057239911E500F3822B /* ServiceMock.swift in Sources */,
+				78593E94234CB5BA00F4D4C2 /* CardsViewController.swift in Sources */,
+				78593EA6234CDC0300F4D4C2 /* Card.swift in Sources */,
+				785B17BD237D7211005354EC /* BasicErrorHandler.swift in Sources */,
+				7890ECF0237C4C9800579018 /* HttpClient.swift in Sources */,
+				785106F12371B0940012EFE0 /* InternalServerErrorHandler.swift in Sources */,
+				7884507A2359AAAC00A3717C /* ChartView.swift in Sources */,
+				7884507E235DD8BE00A3717C /* OverviewCell.swift in Sources */,
+				7851CF43238295CB0005EF1A /* HttpClientProtocol.swift in Sources */,
+				7890ECEC237C084A00579018 /* AlertService.swift in Sources */,
+				780F03A32372E19600E0E166 /* DataApi.swift in Sources */,
+				785106F32371B0A30012EFE0 /* NotFoundErrorHandler.swift in Sources */,
+				78593E90234CB5BA00F4D4C2 /* AppDelegate.swift in Sources */,
+				783BE28D2355E45F00650B0C /* DetailsTableViewController.swift in Sources */,
+				780F039F2372C6EF00E0E166 /* NoConnectionErrorHandler.swift in Sources */,
+				78DEB3A12396990F00D860E1 /* MainCoordinator.swift in Sources */,
+				78593E92234CB5BA00F4D4C2 /* SceneDelegate.swift in Sources */,
+				78DEB3A32396998400D860E1 /* Storyboarded.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		785B17C5237D99C0005354EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C815D32385688E006A642C /* NotFoundErrorHandler.swift in Sources */,
+				7851CF472382A3A80005EF1A /* HttpClientProtocol.swift in Sources */,
+				7864FE2D2397B3B4006BB36D /* Coordinator.swift in Sources */,
+				78C815D923856891006A642C /* Service.swift in Sources */,
+				78C815D62385688E006A642C /* GeneralErrorHandler.swift in Sources */,
+				78C815E1238569BD006A642C /* DataApi.swift in Sources */,
+				78C815DF2385698A006A642C /* CardsPresenter.swift in Sources */,
+				78C815E2238569C1006A642C /* ChartView.swift in Sources */,
+				78C815E02385699D006A642C /* OverviewCell.swift in Sources */,
+				78C815D82385688E006A642C /* JsonErrorHandler.swift in Sources */,
+				78C815D02385688E006A642C /* UnauthorizedErrorHandler.swift in Sources */,
+				7851CF462382A3970005EF1A /* HttpClientMock.swift in Sources */,
+				78C815DC23856968006A642C /* CardsViewController.swift in Sources */,
+				78C815CF23856888006A642C /* NetworkManager.swift in Sources */,
+				7864FE2C2397B3B1006BB36D /* MainCoordinator.swift in Sources */,
+				785B17CC237D99C0005354EC /* probafeladatTests.swift in Sources */,
+				78C815E4238569D4006A642C /* HttpClient.swift in Sources */,
+				78C815D12385688E006A642C /* ForbiddenErrorHandler.swift in Sources */,
+				78C815E3238569C4006A642C /* DetailsTableViewController.swift in Sources */,
+				78C815D42385688E006A642C /* EmptyResponseHandler.swift in Sources */,
+				78C815D22385688E006A642C /* InternalServerErrorHandler.swift in Sources */,
+				78C815D52385688E006A642C /* NoConnectionErrorHandler.swift in Sources */,
+				78C815C323855DB9006A642C /* Card.swift in Sources */,
+				78C815D72385688E006A642C /* BasicErrorHandler.swift in Sources */,
+				78C815DB238568B8006A642C /* AlertService.swift in Sources */,
+				7864FE2B2397B3AB006BB36D /* Storyboarded.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78BBA785238BF8750090DFA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78BBA793238BFBC30090DFA1 /* probafeladatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		785B17CF237D99C0005354EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78593E8B234CB5BA00F4D4C2 /* probafeladat */;
+			targetProxy = 785B17CE237D99C0005354EC /* PBXContainerItemProxy */;
+		};
+		78BBA78F238BF8750090DFA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78593E8B234CB5BA00F4D4C2 /* probafeladat */;
+			targetProxy = 78BBA78E238BF8750090DFA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78593E95234CB5BA00F4D4C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78593E96234CB5BA00F4D4C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78593E9A234CB5BB00F4D4C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78593E9B234CB5BB00F4D4C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78593E9E234CB5BB00F4D4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78593E9F234CB5BB00F4D4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78593EA1234CB5BB00F4D4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0C79D15F42BFDCAD8353B4E /* Pods-probafeladat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = probafeladat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		78593EA2234CB5BB00F4D4C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 561B716592B39ABB208E6952 /* Pods-probafeladat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = probafeladat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		785B17D1237D99C0005354EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC7A1FF7359D4C5966D1C7EB /* Pods-probafeladat-probafeladatTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = probafeladatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/probafeladat.app/probafeladat";
+			};
+			name = Debug;
+		};
+		785B17D2237D99C0005354EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9635E846BC10FB09418CE79D /* Pods-probafeladat-probafeladatTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = probafeladatTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/probafeladat.app/probafeladat";
+			};
+			name = Release;
+		};
+		78BBA790238BF8750090DFA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = probafeladatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = probafeladat;
+			};
+			name = Debug;
+		};
+		78BBA791238BF8750090DFA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = probafeladatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = probafeladat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78593E87234CB5BA00F4D4C2 /* Build configuration list for PBXProject "probafeladat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78593E9E234CB5BB00F4D4C2 /* Debug */,
+				78593E9F234CB5BB00F4D4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78593EA0234CB5BB00F4D4C2 /* Build configuration list for PBXNativeTarget "probafeladat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78593EA1234CB5BB00F4D4C2 /* Debug */,
+				78593EA2234CB5BB00F4D4C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		785B17D0237D99C0005354EC /* Build configuration list for PBXNativeTarget "probafeladatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785B17D1237D99C0005354EC /* Debug */,
+				785B17D2237D99C0005354EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78BBA792238BF8750090DFA1 /* Build configuration list for PBXNativeTarget "probafeladatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78BBA790238BF8750090DFA1 /* Debug */,
+				78BBA791238BF8750090DFA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78593E84234CB5BA00F4D4C2 /* Project object */;
+}

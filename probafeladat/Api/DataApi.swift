@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct DataApi {
+protocol DataApiProtocol {
+    var urlString: String { get }
+    func getCard(completion: @escaping( [Card]?, _ error: Error?) -> ())
+}
+
+struct DataApi: DataApiProtocol{
     
     let urlString = "https://raw.githubusercontent.com/wupdigital/interview-api/master/api/v1/cards.json"
     let service: ServiceProtocol

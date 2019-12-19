@@ -14,17 +14,17 @@ class CardsPresenter {
     weak var coordinator: MainCoordinator?
     
     let view: CardsView
+    let dataApi: DataApiProtocol
     
-    let dataApi = DataApi(service: Service(httpClient: HttpClient()))
-    let overviewTitles = ["Current balance","Min. payment","Due date"]
-    
+    var dataSource: [CardPresenterModel] = []
     var cards : [Card] = []
 
     let currentCardIndex: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     let disposeBag = DisposeBag()
     
-    init(view: CardsView) {
+    init(view: CardsView, dataApi: DataApiProtocol = DataApi(service: Service(httpClient: HttpClient()))) {
         self.view = view
+        self.dataApi = dataApi
     }
     
     func loadData(_ completionHandler:@escaping(_ error:Error?)->()) {
@@ -34,18 +34,27 @@ class CardsPresenter {
                 completionHandler(error)
                 return
             }
+            
             self.cards = fetchedCardsTemp
+            self.setupObserver()
             
             completionHandler(error)
-            
-            self.setupObserver()
+                        
         }
+    }
+    
+    private func setupDataSource() {
+        dataSource.removeAll()
+        dataSource.append(CardPresenterModel(title: "Current balance", curreny: cards[getCurrentCardIndex()].currency, value: String(cards[getCurrentCardIndex()].currentBalance)))
+        dataSource.append(CardPresenterModel(title: "Min. payment", curreny: cards[getCurrentCardIndex()].currency, value: String(cards[getCurrentCardIndex()].minPayment)))
+        dataSource.append(CardPresenterModel(title: "Due date", curreny: nil, value: cards[getCurrentCardIndex()].dueDate.description))
     }
     
     private func setupObserver() {
         currentCardIndex.asObservable()
             .subscribe(onNext: { _ in
                 self.view.updateViews()
+                self.setupDataSource()
             })
         .disposed(by: disposeBag)
     }
@@ -72,6 +81,14 @@ class CardsPresenter {
         }
     }
     
+}
+
+struct CardPresenterModel {
+    
+    let title: String
+    let curreny: String?
+    let value: String
+
 }
 
 extension CardsPresenter {

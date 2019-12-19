@@ -12,7 +12,6 @@ struct AccountDetails {
 
     let accountLimit: Int
     let accountNumber: String
-
   
 }
 
@@ -38,8 +37,6 @@ struct Card {
     let accountDetails: AccountDetails
     let status: String
     let cardImage: String
-    
-    
     
 }
 

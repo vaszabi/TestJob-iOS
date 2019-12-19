@@ -10,6 +10,8 @@
 		10E03D9E2F61FD60274F71ED /* Pods_probafeladat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555A2573C9E468AD98B9B3F0 /* Pods_probafeladat.framework */; };
 		780F039F2372C6EF00E0E166 /* NoConnectionErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F039E2372C6EF00E0E166 /* NoConnectionErrorHandler.swift */; };
 		780F03A32372E19600E0E166 /* DataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F03A22372E19600E0E166 /* DataApi.swift */; };
+		7834214023A8EC1100978891 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A785C323A7B76100835E8E /* SelfSizedTableView.swift */; };
+		7834214223A8EC2300978891 /* ProbaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A785C523A7CD9100835E8E /* ProbaTabBarController.swift */; };
 		783BE28D2355E45F00650B0C /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783BE28C2355E45F00650B0C /* DetailsTableViewController.swift */; };
 		785106EB23717F210012EFE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EA23717F210012EFE0 /* NetworkManager.swift */; };
 		785106ED2371B0560012EFE0 /* UnauthorizedErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EC2371B0560012EFE0 /* UnauthorizedErrorHandler.swift */; };
@@ -34,6 +36,7 @@
 		7864FE2C2397B3B1006BB36D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB3A02396990F00D860E1 /* MainCoordinator.swift */; };
 		7864FE2D2397B3B4006BB36D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DEB39E239698C300D860E1 /* Coordinator.swift */; };
 		7869C057239911E500F3822B /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869C056239911E500F3822B /* ServiceMock.swift */; };
+		786A0C7D23AB7290000DB1DC /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A0C7C23AB7290000DB1DC /* ArrowButton.swift */; };
 		786F718523840074002BA836 /* CardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F718423840074002BA836 /* CardsPresenter.swift */; };
 		7876FD5C237EAE7A00FDBD07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78593E98234CB5BB00F4D4C2 /* Assets.xcassets */; };
 		7884507A2359AAAC00A3717C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788450792359AAAC00A3717C /* ChartView.swift */; };
@@ -42,6 +45,8 @@
 		7890ECEC237C084A00579018 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECEB237C084A00579018 /* AlertService.swift */; };
 		7890ECEE237C27DE00579018 /* GeneralErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECED237C27DD00579018 /* GeneralErrorHandler.swift */; };
 		7890ECF0237C4C9800579018 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890ECEF237C4C9800579018 /* HttpClient.swift */; };
+		78A785C423A7B76100835E8E /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A785C323A7B76100835E8E /* SelfSizedTableView.swift */; };
+		78A785C623A7CD9100835E8E /* ProbaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A785C523A7CD9100835E8E /* ProbaTabBarController.swift */; };
 		78BBA793238BFBC30090DFA1 /* probafeladatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBA78B238BF8750090DFA1 /* probafeladatUITests.swift */; };
 		78C815C323855DB9006A642C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78593EA5234CDC0300F4D4C2 /* Card.swift */; };
 		78C815CF23856888006A642C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EA23717F210012EFE0 /* NetworkManager.swift */; };
@@ -116,6 +121,7 @@
 		785B17CB237D99C0005354EC /* probafeladatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probafeladatTests.swift; sourceTree = "<group>"; };
 		785B17CD237D99C0005354EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7869C056239911E500F3822B /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
+		786A0C7C23AB7290000DB1DC /* ArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowButton.swift; sourceTree = "<group>"; };
 		786F718423840074002BA836 /* CardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsPresenter.swift; sourceTree = "<group>"; };
 		788450792359AAAC00A3717C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		7884507B235DA54000A3717C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 		7890ECEB237C084A00579018 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		7890ECED237C27DD00579018 /* GeneralErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralErrorHandler.swift; sourceTree = "<group>"; };
 		7890ECEF237C4C9800579018 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		78A785C323A7B76100835E8E /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		78A785C523A7CD9100835E8E /* ProbaTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbaTabBarController.swift; sourceTree = "<group>"; };
 		78BBA789238BF8750090DFA1 /* probafeladatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = probafeladatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BBA78B238BF8750090DFA1 /* probafeladatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probafeladatUITests.swift; sourceTree = "<group>"; };
 		78BBA78D238BF8750090DFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,14 +197,15 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		783522AB2369976A00BCF86F /* Controller */ = {
+		783522AB2369976A00BCF86F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				783BE28C2355E45F00650B0C /* DetailsTableViewController.swift */,
 				78593E93234CB5BA00F4D4C2 /* CardsViewController.swift */,
 				78DEB3A22396998400D860E1 /* Storyboarded.swift */,
+				78A785C523A7CD9100835E8E /* ProbaTabBarController.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		783522AC2369977400BCF86F /* Model */ = {
@@ -214,6 +223,8 @@
 				78593E95234CB5BA00F4D4C2 /* Main.storyboard */,
 				78593E9A234CB5BB00F4D4C2 /* LaunchScreen.storyboard */,
 				788450792359AAAC00A3717C /* ChartView.swift */,
+				78A785C323A7B76100835E8E /* SelfSizedTableView.swift */,
+				786A0C7C23AB7290000DB1DC /* ArrowButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,7 +295,7 @@
 				786F71832384004F002BA836 /* Presenter */,
 				780F03A52372FE5C00E0E166 /* Api */,
 				783522AE236997B700BCF86F /* Service */,
-				783522AB2369976A00BCF86F /* Controller */,
+				783522AB2369976A00BCF86F /* ViewController */,
 				785106E923717EEE0012EFE0 /* Network */,
 				783522AC2369977400BCF86F /* Model */,
 				785106F62371B0CB0012EFE0 /* BasicErrorHandlers */,
@@ -556,6 +567,7 @@
 				7890ECEE237C27DE00579018 /* GeneralErrorHandler.swift in Sources */,
 				785B17BF237D8ABE005354EC /* JsonErrorHandler.swift in Sources */,
 				785106ED2371B0560012EFE0 /* UnauthorizedErrorHandler.swift in Sources */,
+				786A0C7D23AB7290000DB1DC /* ArrowButton.swift in Sources */,
 				785106EF2371B0750012EFE0 /* ForbiddenErrorHandler.swift in Sources */,
 				7884507C235DA54000A3717C /* Service.swift in Sources */,
 				7869C057239911E500F3822B /* ServiceMock.swift in Sources */,
@@ -569,11 +581,13 @@
 				7851CF43238295CB0005EF1A /* HttpClientProtocol.swift in Sources */,
 				7890ECEC237C084A00579018 /* AlertService.swift in Sources */,
 				780F03A32372E19600E0E166 /* DataApi.swift in Sources */,
+				78A785C623A7CD9100835E8E /* ProbaTabBarController.swift in Sources */,
 				785106F32371B0A30012EFE0 /* NotFoundErrorHandler.swift in Sources */,
 				78593E90234CB5BA00F4D4C2 /* AppDelegate.swift in Sources */,
 				783BE28D2355E45F00650B0C /* DetailsTableViewController.swift in Sources */,
 				780F039F2372C6EF00E0E166 /* NoConnectionErrorHandler.swift in Sources */,
 				78DEB3A12396990F00D860E1 /* MainCoordinator.swift in Sources */,
+				78A785C423A7B76100835E8E /* SelfSizedTableView.swift in Sources */,
 				78593E92234CB5BA00F4D4C2 /* SceneDelegate.swift in Sources */,
 				78DEB3A32396998400D860E1 /* Storyboarded.swift in Sources */,
 			);
@@ -590,10 +604,12 @@
 				78C815D62385688E006A642C /* GeneralErrorHandler.swift in Sources */,
 				78C815E1238569BD006A642C /* DataApi.swift in Sources */,
 				78C815DF2385698A006A642C /* CardsPresenter.swift in Sources */,
+				7834214223A8EC2300978891 /* ProbaTabBarController.swift in Sources */,
 				78C815E2238569C1006A642C /* ChartView.swift in Sources */,
 				78C815E02385699D006A642C /* OverviewCell.swift in Sources */,
 				78C815D82385688E006A642C /* JsonErrorHandler.swift in Sources */,
 				78C815D02385688E006A642C /* UnauthorizedErrorHandler.swift in Sources */,
+				7834214023A8EC1100978891 /* SelfSizedTableView.swift in Sources */,
 				7851CF462382A3970005EF1A /* HttpClientMock.swift in Sources */,
 				78C815DC23856968006A642C /* CardsViewController.swift in Sources */,
 				78C815CF23856888006A642C /* NetworkManager.swift in Sources */,

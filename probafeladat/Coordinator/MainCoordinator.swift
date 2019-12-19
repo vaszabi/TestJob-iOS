@@ -17,18 +17,13 @@ class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
     var cardsPresenter: CardsPresenter?
     
-    init(window: UIWindow = UIWindow(), navigationController: UINavigationController = UINavigationController(), tabBarController: UITabBarController = UITabBarController()) {
+    init(window: UIWindow = UIWindow(), navigationController: UINavigationController = UINavigationController(), tabBarController: UITabBarController = ProbaTabBarController()) {
         self.window = window
-        self.navigationController = navigationController
+        self.navigationController = tabBarController.viewControllers?.first as! UINavigationController
         self.tabBarController = tabBarController
-        setupTabBarController()
         setupWindow()
     }
-    
-    func setupTabBarController() {
-        tabBarController.viewControllers = getViewControllers()
-        tabBarController.selectedViewController = tabBarController.viewControllers?.first
-    }
+
     
     func setupWindow() {
         self.window.rootViewController = tabBarController
@@ -51,50 +46,5 @@ class MainCoordinator: Coordinator {
         vc.card = cardsPresenter.cards[cardsPresenter.currentCardIndex.value]
         navigationController.pushViewController(vc, animated: true)
     }
-    
-  
-    
-    private func getViewControllers() -> [UIViewController]{
-        var vcArray = [UIViewController]()
-        let tabBarItems = configureTabBarItems()
-        
-        navigationController.tabBarItem = tabBarItems.first
-        
-        vcArray.append(navigationController)
-        
-        for i in 1..<tabBarItems.count {
-            let vc = UIViewController()
-            vc.tabBarItem = tabBarItems[i]
-            vcArray.append(vc)
-        }
-        
-        return vcArray
-    }
-    
-    private func configureTabBarItems() -> [UITabBarItem] {
-          var array = [UITabBarItem]()
-          
-          let cardsItem = UITabBarItem()
-          cardsItem.title = "Cards"
-          cardsItem.image = UIImage(named: "nav_cards")
-          array.append(cardsItem)
-          
-          let transactionsItem = UITabBarItem()
-          transactionsItem.title = "Transactions"
-          transactionsItem.image = UIImage(named: "nav_trans")
-          array.append(transactionsItem)
-          
-          let statementsItem = UITabBarItem()
-          statementsItem.title = "Statements"
-          statementsItem.image = UIImage(named: "nav_state")
-          array.append(statementsItem)
-          
-          let moreItem = UITabBarItem()
-          moreItem.title = "More"
-          moreItem.image = UIImage(named: "nav_more")
-          array.append(moreItem)
-          
-          return array
-      }
     
 }

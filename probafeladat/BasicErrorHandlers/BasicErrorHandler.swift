@@ -8,6 +8,12 @@
 
 import Foundation
 
+protocol ErrorHandlerProtocol {
+    static var errorTitle: String { get }
+    static var errorMessage: String { get }
+    static func handle()
+}
+
 class BasicErrorHandler {
     
     static func handleResponse(response: HTTPURLResponse) {

@@ -16,13 +16,13 @@ class CardsViewController: UIViewController, Storyboarded {
     
     weak var presenter: CardsPresenter!
     
-    @IBOutlet weak var overviewTV: UITableView!
+    @IBOutlet weak var overviewTV: SelfSizedTableView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var leftArrowButton: UIButton!
-    @IBOutlet weak var rightArrowButton: UIButton!
+    @IBOutlet weak var rightArrowButton: ArrowButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var chartView: ChartView!
     @IBOutlet weak var exclamationImg: UIImageView!
@@ -32,10 +32,6 @@ class CardsViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        overviewTV.estimatedRowHeight = 40
-        overviewTV.rowHeight = UITableView.automaticDimension
-        
         
         setImages()
         setup()
@@ -55,6 +51,10 @@ class CardsViewController: UIViewController, Storyboarded {
                 print(error!.localizedDescription)
             }
         }
+        
+        overviewTV.maxHeight = 320
+        overviewTV.estimatedRowHeight = 40
+        overviewTV.rowHeight = UITableView.automaticDimension
     }
     
     
@@ -134,14 +134,7 @@ class CardsViewController: UIViewController, Storyboarded {
     }
     
     private func setImages() {
-        let origImage = UIImage(named: "ic_arrowleft.png")
-        let rotatedImage = origImage?.rotate(radians: .pi)
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        let rotatedTintedImage = rotatedImage?.withRenderingMode(.alwaysTemplate)
-        leftArrowButton.setImage(tintedImage, for: .normal)
-        leftArrowButton.tintColor = #colorLiteral(red: 0.3254901961, green: 0.6039215686, blue: 0.7764705882, alpha: 1)
-        rightArrowButton.setImage(rotatedTintedImage, for: .normal)
-        rightArrowButton.tintColor = #colorLiteral(red: 0.3254901961, green: 0.6039215686, blue: 0.7764705882, alpha: 1)
+        rightArrowButton.transform = rightArrowButton.transform.rotated(by: CGFloat(Double.pi))
         
         let origExcImage = UIImage(named: "ic_alert.png")
         let tintedExcImage = origExcImage?.withRenderingMode(.alwaysTemplate)
@@ -185,25 +178,17 @@ class CardsViewController: UIViewController, Storyboarded {
 extension CardsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.overviewTitles.count
+        return presenter.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = overviewTV.dequeueReusableCell(withIdentifier: "cell") as? OverviewCell else { return UITableViewCell() }
         
-        if !presenter.cards.isEmpty {
-            switch indexPath.row {
-            case 0:
-                cell.addCell(title: presenter.overviewTitles[indexPath.row], curreny: presenter.cards[presenter.getCurrentCardIndex()].currency, value: String(presenter.cards[presenter.getCurrentCardIndex()].currentBalance))
-            case 1:
-                cell.addCell(title: presenter.overviewTitles[indexPath.row], curreny: presenter.cards[presenter.getCurrentCardIndex()].currency, value: String(presenter.cards[presenter.getCurrentCardIndex()].minPayment))
-            case 2:
-                cell.addCell(title: presenter.overviewTitles[indexPath.row], curreny: nil, value: presenter.cards[presenter.getCurrentCardIndex()].dueDate.description)
-            default:
-                break
-            }
+        if (!presenter.dataSource.isEmpty) {
+            cell.addCell(title: presenter.dataSource[indexPath.row].title, curreny: presenter.dataSource[indexPath.row].curreny, value: presenter.dataSource[indexPath.row].value)
         }
+
         return cell
     }
 }

@@ -9,6 +9,8 @@ target 'probafeladat' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Swinject'
+  pod 'SwiftLint'
   
   target 'probafeladatTests' do
     

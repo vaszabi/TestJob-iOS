@@ -15,7 +15,7 @@ class MainCoordinator: Coordinator {
     private var tabBarController: UITabBarController
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    var cardsPresenter: CardsPresenter?
+    var cardsPresenter: CardsPresenterImpl?
     
     init(window: UIWindow = UIWindow(), navigationController: UINavigationController = UINavigationController(), tabBarController: UITabBarController = ProbaTabBarController()) {
         self.window = window
@@ -32,7 +32,7 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let vc = CardsViewController.instantiate()
-        cardsPresenter = CardsPresenter(view: vc)
+        cardsPresenter = CardsPresenterImpl(view: vc)
         cardsPresenter?.coordinator = self
         guard let cardsPresenter = cardsPresenter else { return }
         vc.presenter = cardsPresenter

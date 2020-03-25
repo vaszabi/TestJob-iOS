@@ -10,7 +10,6 @@ import UIKit
 
 protocol LoginView: AnyObject {
     func showWrongCredentials()
-    func signupTapped()
 }
 
 class LoginViewController: UIViewController {
@@ -62,6 +61,12 @@ class LoginViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
+        
+    }
+    
+    // MARK: - IBActions
+    @IBAction func signUpTapped(_ sender: UIButton) {
+        presenter?.navigateToSignUp()
     }
     
 }
@@ -69,10 +74,6 @@ class LoginViewController: UIViewController {
 // MARK: - LoginView conform
 extension LoginViewController: LoginView {
     func showWrongCredentials() {
-        
-    }
-    
-    func signupTapped() {
         
     }
     

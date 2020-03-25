@@ -57,6 +57,9 @@
                                                             <constraint firstAttribute="height" constant="50" id="Do4-vk-nWF"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="signUpTapped:" destination="p7f-7L-kyr" eventType="touchUpInside" id="OXA-o1-80g"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -116,13 +119,61 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Or7-iI-7lc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ieN-H9-AWl">
+                                <rect key="frame" x="30" y="307" width="354" height="282"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="skC-C8-S4a">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="RcA-xe-yNj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppM-3j-LTw">
+                                        <rect key="frame" x="0.0" y="58" width="354" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="sqd-wp-EXg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rPY-Jf-6YD">
+                                        <rect key="frame" x="0.0" y="116" width="354" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Wqs-2j-YbT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v70-XM-Nwg">
+                                        <rect key="frame" x="0.0" y="174" width="354" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="GHO-i3-mks"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLr-Mp-rff">
+                                        <rect key="frame" x="0.0" y="232" width="354" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="bUK-TX-CRk"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ieN-H9-AWl" firstAttribute="leading" secondItem="dXp-Gu-t24" secondAttribute="leading" constant="30" id="7MQ-Xx-Ndl"/>
                             <constraint firstItem="Or7-iI-7lc" firstAttribute="leading" secondItem="dXp-Gu-t24" secondAttribute="leading" id="Fuv-HI-CHB"/>
                             <constraint firstItem="dXp-Gu-t24" firstAttribute="trailing" secondItem="Or7-iI-7lc" secondAttribute="trailing" id="OK5-Ax-UeD"/>
+                            <constraint firstItem="dXp-Gu-t24" firstAttribute="trailing" secondItem="ieN-H9-AWl" secondAttribute="trailing" constant="30" id="f5b-Fi-6a1"/>
                             <constraint firstItem="Or7-iI-7lc" firstAttribute="top" secondItem="vwd-vJ-XRh" secondAttribute="top" id="i6A-Py-s97"/>
                             <constraint firstAttribute="bottom" secondItem="Or7-iI-7lc" secondAttribute="bottom" id="jrN-9J-JZv"/>
+                            <constraint firstItem="ieN-H9-AWl" firstAttribute="centerX" secondItem="vwd-vJ-XRh" secondAttribute="centerX" id="nJt-Vg-uh3"/>
+                            <constraint firstItem="ieN-H9-AWl" firstAttribute="centerY" secondItem="vwd-vJ-XRh" secondAttribute="centerY" id="yuK-4k-nwC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dXp-Gu-t24"/>
                     </view>

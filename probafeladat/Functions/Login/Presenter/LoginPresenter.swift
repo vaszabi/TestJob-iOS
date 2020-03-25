@@ -11,15 +11,22 @@ import Foundation
 protocol LoginPresenter {
     func viewDidLoad(with viewController: LoginView)
     func loginTapped()
-    func signUpTapped()
+    func navigateToSignUp()
 }
 
 class LoginPresenterImpl {
     
     // MARK: - Properties
-    weak var view: LoginView!
+    private weak var view: LoginView?
     weak var coordinator: MainCoordinator?
+    
+    
+    init(view: LoginViewController) {
+        self.view = view
+    }
 }
+
+
 
 // MARK: - LoginPresenter conform
 extension LoginPresenterImpl: LoginPresenter {
@@ -32,8 +39,9 @@ extension LoginPresenterImpl: LoginPresenter {
         
     }
     
-    func signUpTapped() {
-        
+    func navigateToSignUp() {
+        print("KURVA ANYÁD")
+        coordinator?.navigateToSignUp()
     }
     
 }

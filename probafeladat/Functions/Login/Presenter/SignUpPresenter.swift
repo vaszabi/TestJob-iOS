@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+protocol SignUpPresenter {
+    func viewDidLoad(with viewController: SignUpView)
+}
+
+class SignUpPresenterImpl {
+    
+    // MARK: - Properties
+    weak var view: SignUpView!
+    weak var coordinator: MainCoordinator?
+}
+
+// MARK: - LoginPresenter conform
+extension SignUpPresenterImpl: SignUpPresenter {
+    
+    func viewDidLoad(with viewController: SignUpView) {
+        self.view = viewController
+    }
+    
+}

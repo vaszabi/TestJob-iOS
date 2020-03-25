@@ -33,10 +33,18 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
         guard let viewController = vc else { return }
-        let loginPresenter = LoginPresenterImpl()
+        let loginPresenter = LoginPresenterImpl(view: viewController)
         loginPresenter.coordinator = self
         viewController.presenter = loginPresenter
         navigationController.pushViewController(viewController, animated: false)
+    }
+    
+    func navigateToSignUp() {
+        let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
+        guard let viewController = vc else { return }
+        let signUpPresenter = SignUpPresenterImpl()
+        viewController.presenter = signUpPresenter
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func navigateToCards() {

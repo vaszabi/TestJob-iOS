@@ -10,6 +10,29 @@ import UIKit
 
 extension UIView {
     
+    func addBlurToView() {
+           var blurEffect: UIBlurEffect!
+           
+           if #available(iOS 10.0, *) {
+               blurEffect = UIBlurEffect(style: .dark)
+           } else {
+               blurEffect = UIBlurEffect(style: .light)
+           }
+           let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+           blurredEffectView.frame = self.bounds
+           blurredEffectView.alpha = 0.6
+           blurredEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+           self.addSubview(blurredEffectView)
+       }
+       
+       func removeBlurFromView() {
+           for subview in self.subviews {
+               if subview is UIVisualEffectView {
+                   subview.removeFromSuperview()
+               }
+           }
+       }
+    
     @IBInspectable
     var cornerRadius: CGFloat {
         get {

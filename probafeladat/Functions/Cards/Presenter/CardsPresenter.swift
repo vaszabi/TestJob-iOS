@@ -39,7 +39,7 @@ final class CardsPresenterImpl {
         loadData()
     }
     
-    func loadData() {
+    private func loadData() {
         view?.showLoading()
         dataApi.getCard { (fetchedCards, error) in
             guard let fetchedCardsTemp = fetchedCards else {

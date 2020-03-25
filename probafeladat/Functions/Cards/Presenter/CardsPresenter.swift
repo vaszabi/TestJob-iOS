@@ -10,6 +10,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol CardsPresenter: AnyObject {
+    func refresh()
+    func viewDidLoad(with viewController: CardsView)
+    func navigateToDetials()
+}
+
 final class CardsPresenterImpl {
     
     // MARK: - Properties
@@ -23,28 +29,36 @@ final class CardsPresenterImpl {
     let currentCardIndex: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     let disposeBag = DisposeBag()
     
+    // MARK: - Init
     init(view: CardsView, dataApi: DataApiProtocol = DataApi(service: Service(httpClient: HttpClient()))) {
         self.view = view
         self.dataApi = dataApi
     }
     
-    func loadData(_ completionHandler:@escaping(_ error:Error?)->()) {
-        
+    func refresh() {
+        loadData()
+    }
+    
+    private func loadData() {
+        view?.showLoading()
         dataApi.getCard { (fetchedCards, error) in
-            
             guard let fetchedCardsTemp = fetchedCards else {
-                completionHandler(error)
+                self.view?.hideLoading()
+                self.view?.showRefresh()
                 return
             }
             
             self.cards = fetchedCardsTemp
             self.setupObserver()
-            
-            completionHandler(error)
-            
+            self.view?.showContent()
         }
     }
     
+    public func getCurrentCardIndex() -> Int {
+        return currentCardIndex.value
+    }
+    
+    // TODO: Use xib
     private func setupDataSource() {
         dataSource.removeAll()
         dataSource.append(CardPresentationModel(title: "Current balance", curreny: cards[getCurrentCardIndex()].currency, value: String(cards[getCurrentCardIndex()].currentBalance)))
@@ -59,10 +73,6 @@ final class CardsPresenterImpl {
                 self.setupDataSource()
             })
             .disposed(by: disposeBag)
-    }
-    
-    func showDetails() {
-        coordinator?.cardDetails()
     }
     
     func currentCardIndexIncrement() {
@@ -85,9 +95,18 @@ final class CardsPresenterImpl {
     
 }
 
-extension CardsPresenterImpl {
+// MARK: - CardsPresenter conform
+extension CardsPresenterImpl: CardsPresenter {
     
-    func getCurrentCardIndex() -> Int {
-        return currentCardIndex.value
+    func viewDidLoad(with viewController: CardsView) {
+        self.view = viewController
+        
+        refresh()
     }
+    
+    func navigateToDetials() {
+        coordinator?.cardDetails()
+    }
+    
+    
 }

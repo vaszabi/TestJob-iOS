@@ -40,16 +40,19 @@ class probafeladatUITests: XCTestCase {
     
     func testTappingButtons() {
         
-        let scrollViewsQuery = XCUIApplication().scrollViews
-        let icArrowleftButton = scrollViewsQuery.otherElements.buttons["ic arrowleft"]
+        let element = XCUIApplication().scrollViews.otherElements.containing(.button, identifier:"DETAILS").children(matching: .other).element(boundBy: 0)
+        let icArrowleftButton = element.children(matching: .button).matching(identifier: "ic arrowleft").element(boundBy: 1)
+        icArrowleftButton.tap()
         icArrowleftButton.tap()
         icArrowleftButton.tap()
         
-        let button = scrollViewsQuery.otherElements.containing(.button, identifier:"DETAILS").children(matching: .other).element(boundBy: 0).children(matching: .button).element(boundBy: 1)
-        button.tap()
-        button.tap()
-        button.tap()
-        
+        let icArrowleftButton2 = element.children(matching: .button).matching(identifier: "ic arrowleft").element(boundBy: 0)
+        icArrowleftButton2.tap()
+        icArrowleftButton2.tap()
+        icArrowleftButton2.tap()
+        icArrowleftButton2.tap()
+        icArrowleftButton2.tap()
+                
     }
     
     func testDetailsOfValidCard() {

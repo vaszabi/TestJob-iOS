@@ -15,55 +15,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="NYE-tk-X8s">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="NYE-tk-X8s">
+                                <rect key="frame" x="-333" y="-32" width="1080" height="960"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Yng-6O-j5r">
-                                <rect key="frame" x="40" y="313" width="334" height="270"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCW-aM-5VX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="UsernameTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9j-nu-key" userLabel="UsernameTextField" customClass="LoginTextField" customModule="probafeladat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dM0-rD-vdo" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Yng-6O-j5r">
+                                                <rect key="frame" x="30" y="274" width="354" height="270"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="UsernameTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9j-nu-key" userLabel="UsernameTextField" customClass="LoginTextField" customModule="probafeladat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="QI7-ys-69N"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="PasswordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-8q-FXg" userLabel="PasswordTextField" customClass="LoginTextField" customModule="probafeladat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="70" width="354" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Gd7-hr-WO5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfw-mA-JII" userLabel="LoginBtn" customClass="LoginButton" customModule="probafeladat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="140" width="354" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="198-s0-020"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="SignUpBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJZ-eC-k0F" userLabel="SignUpBtn" customClass="LoginButton" customModule="probafeladat" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="220" width="354" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Do4-vk-nWF"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="QI7-ys-69N"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yng-6O-j5r" secondAttribute="trailing" constant="30" id="4zg-AF-6QW"/>
+                                            <constraint firstItem="Yng-6O-j5r" firstAttribute="leading" secondItem="dM0-rD-vdo" secondAttribute="leading" constant="30" id="RZK-dk-DLm"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="PasswordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-8q-FXg" userLabel="PasswordTextField" customClass="LoginTextField" customModule="probafeladat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Gd7-hr-WO5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfw-mA-JII" userLabel="LoginBtn" customClass="LoginButton" customModule="probafeladat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="198-s0-020"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="SignUpBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJZ-eC-k0F" userLabel="SignUpBtn" customClass="LoginButton" customModule="probafeladat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="220" width="334" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Do4-vk-nWF"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                    </button>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dM0-rD-vdo" firstAttribute="top" secondItem="YCW-aM-5VX" secondAttribute="top" id="4HB-XG-0Yp"/>
+                                    <constraint firstItem="Yng-6O-j5r" firstAttribute="centerY" secondItem="YCW-aM-5VX" secondAttribute="centerY" id="6XR-xw-fJ2"/>
+                                    <constraint firstItem="dM0-rD-vdo" firstAttribute="width" secondItem="YCW-aM-5VX" secondAttribute="width" id="CGB-Qe-VX3"/>
+                                    <constraint firstItem="dM0-rD-vdo" firstAttribute="leading" secondItem="YCW-aM-5VX" secondAttribute="leading" id="ChJ-5T-XZP"/>
+                                    <constraint firstAttribute="trailing" secondItem="dM0-rD-vdo" secondAttribute="trailing" id="cbq-5h-4K8"/>
+                                    <constraint firstItem="dM0-rD-vdo" firstAttribute="height" secondItem="YCW-aM-5VX" secondAttribute="height" priority="250" id="egr-DB-4ba"/>
+                                    <constraint firstItem="Yng-6O-j5r" firstAttribute="centerX" secondItem="YCW-aM-5VX" secondAttribute="centerX" id="j2n-00-cSt"/>
+                                    <constraint firstAttribute="bottom" secondItem="dM0-rD-vdo" secondAttribute="bottom" id="pnb-j4-8tX"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="FZ8-mh-Iny"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="DlC-KB-em8"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Yng-6O-j5r" firstAttribute="leading" secondItem="Xn0-ad-lzm" secondAttribute="leading" constant="40" id="7zb-7h-TEk"/>
-                            <constraint firstAttribute="bottom" secondItem="NYE-tk-X8s" secondAttribute="bottom" id="Q2d-oY-Mx9"/>
-                            <constraint firstItem="Xn0-ad-lzm" firstAttribute="trailing" secondItem="Yng-6O-j5r" secondAttribute="trailing" constant="40" id="USq-ST-ynU"/>
-                            <constraint firstItem="Yng-6O-j5r" firstAttribute="centerY" secondItem="5Vr-fH-sJ5" secondAttribute="centerY" id="ihR-1s-jbb"/>
-                            <constraint firstItem="Yng-6O-j5r" firstAttribute="centerX" secondItem="5Vr-fH-sJ5" secondAttribute="centerX" id="kO1-xV-93a"/>
-                            <constraint firstItem="NYE-tk-X8s" firstAttribute="leading" secondItem="Xn0-ad-lzm" secondAttribute="leading" id="l3d-Ek-qHU"/>
-                            <constraint firstItem="Xn0-ad-lzm" firstAttribute="trailing" secondItem="NYE-tk-X8s" secondAttribute="trailing" id="ykT-LD-lvW"/>
-                            <constraint firstItem="NYE-tk-X8s" firstAttribute="top" secondItem="5Vr-fH-sJ5" secondAttribute="top" id="z2a-Pn-Erf"/>
+                            <constraint firstItem="Xn0-ad-lzm" firstAttribute="trailing" secondItem="YCW-aM-5VX" secondAttribute="trailing" id="Sjs-lc-GlD"/>
+                            <constraint firstItem="YCW-aM-5VX" firstAttribute="top" secondItem="Xn0-ad-lzm" secondAttribute="top" id="dHz-pQ-Aoh"/>
+                            <constraint firstItem="Xn0-ad-lzm" firstAttribute="bottom" secondItem="YCW-aM-5VX" secondAttribute="bottom" id="u1g-Ni-3RO"/>
+                            <constraint firstItem="YCW-aM-5VX" firstAttribute="leading" secondItem="Xn0-ad-lzm" secondAttribute="leading" id="vUb-RX-7PC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xn0-ad-lzm"/>
                     </view>
@@ -71,6 +96,7 @@
                         <outlet property="backgroundImageView" destination="NYE-tk-X8s" id="6H1-rs-3Xj"/>
                         <outlet property="loginBtn" destination="nfw-mA-JII" id="BeH-Jy-yDh"/>
                         <outlet property="passwordTextField" destination="gIq-8q-FXg" id="nF0-yT-1RO"/>
+                        <outlet property="scrollView" destination="YCW-aM-5VX" id="lKl-jc-gYS"/>
                         <outlet property="signUpBtn" destination="pJZ-eC-k0F" id="HCM-m7-C54"/>
                         <outlet property="usernameTextField" destination="u9j-nu-key" id="Pmv-ZD-rrE"/>
                     </connections>

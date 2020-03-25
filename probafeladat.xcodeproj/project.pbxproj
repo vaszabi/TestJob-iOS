@@ -66,6 +66,7 @@
 		78BBA793238BFBC30090DFA1 /* probafeladatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBA78B238BF8750090DFA1 /* probafeladatUITests.swift */; };
 		78BC7637242BA27000A26251 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BC7636242BA27000A26251 /* LoginButton.swift */; };
 		78BC7639242BA46600A26251 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BC7638242BA46600A26251 /* UIColorExtension.swift */; };
+		78BC763F242BDC6300A26251 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78BC763E242BDC6300A26251 /* GoogleService-Info.plist */; };
 		78C815CF23856888006A642C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EA23717F210012EFE0 /* NetworkManager.swift */; };
 		78C815D02385688E006A642C /* UnauthorizedErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EC2371B0560012EFE0 /* UnauthorizedErrorHandler.swift */; };
 		78C815D12385688E006A642C /* ForbiddenErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785106EE2371B0750012EFE0 /* ForbiddenErrorHandler.swift */; };
@@ -165,6 +166,7 @@
 		78BBA78D238BF8750090DFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78BC7636242BA27000A26251 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		78BC7638242BA46600A26251 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		78BC763E242BDC6300A26251 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78DEB39E239698C300D860E1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		78DEB3A02396990F00D860E1 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		78DEB3A22396998400D860E1 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				78593E91234CB5BA00F4D4C2 /* SceneDelegate.swift */,
 				78593E8F234CB5BA00F4D4C2 /* AppDelegate.swift */,
 				78593E98234CB5BB00F4D4C2 /* Assets.xcassets */,
+				78BC763E242BDC6300A26251 /* GoogleService-Info.plist */,
 				78593E9D234CB5BB00F4D4C2 /* Info.plist */,
 			);
 			path = probafeladat;
@@ -602,6 +605,7 @@
 			files = (
 				78B8959D242A373D0070F5C7 /* Login.storyboard in Resources */,
 				78593E9C234CB5BB00F4D4C2 /* LaunchScreen.storyboard in Resources */,
+				78BC763F242BDC6300A26251 /* GoogleService-Info.plist in Resources */,
 				78593E99234CB5BB00F4D4C2 /* Assets.xcassets in Resources */,
 				78593E97234CB5BA00F4D4C2 /* Main.storyboard in Resources */,
 			);
@@ -956,6 +960,7 @@
 			baseConfigurationReference = D0C79D15F42BFDCAD8353B4E /* Pods-probafeladat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRVVFDU34V;
 				INFOPLIST_FILE = probafeladat/Info.plist;
@@ -963,8 +968,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladat;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.vaszabi.cardsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -975,6 +981,7 @@
 			baseConfigurationReference = 561B716592B39ABB208E6952 /* Pods-probafeladat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRVVFDU34V;
 				INFOPLIST_FILE = probafeladat/Info.plist;
@@ -982,8 +989,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hu.wup.practice.swift.probafeladat;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.vaszabi.cardsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

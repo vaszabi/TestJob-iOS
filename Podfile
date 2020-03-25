@@ -11,6 +11,9 @@ target 'probafeladat' do
   pod 'RxCocoa'
   pod 'Swinject'
   pod 'SwiftLint'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   
   target 'probafeladatTests' do
     
